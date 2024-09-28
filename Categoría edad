@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   
+   int edad;
+   
+   cout<<"Introduce tu edad: " "\n";
+   cin>>edad;
+
+   while (edad<0){
+       cout<<"La edad introducida es incorrecta" "\n";
+       cout<<"Introduce una edad correcta" "\n";
+       cin>>edad;
+       
+   }
+   
+    if (edad>0){
+       
+       if (edad>=0 && edad<13) {
+       cout<<"Te encuentras en la categoria niño " "\n";
+       }
+       
+        if (edad>12 && edad<18) {
+       cout<<"Te encuentras en la categoria adolescente " "\n";
+       }
+   
+       if (edad>17 && edad<65) {
+       cout<<"Te encuentras en la categoria adulto " "\n";
+       }
+       
+       if (edad>64 && edad<120) {
+       cout<<"Te encuentras en la categoria anciano " "\n";
+       }
+        
+   }
+   
+    return 0;
+}
