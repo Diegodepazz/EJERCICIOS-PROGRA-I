@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   
+   int numero;
+   
+   cout<<"Introduce un numero del 1 al 7: " "\n";
+   cin>>numero;
+
+   while (numero<=0 || numero>7){
+       cout<<"El número introducido es incorrecto" "\n";
+       cout<<"Introduce un número correcto" "\n";
+       cin>>numero;
+       
+   }
+   
+   if (numero>0 && numero<8 ){
+       
+       if (numero==1) {
+       cout<<"Es lunes " "\n";
+       }
+       
+       if (numero==2) {
+       cout<<"Es martes " "\n";
+       }
+      
+       if (numero==3) {
+       cout<<"Es miércoles " "\n";
+       }
+       
+       if (numero==4) {
+       cout<<"Es jueves " "\n";
+       }
+       
+       if (numero==5) {
+       cout<<"Es viernes " "\n";
+       } 
+        
+       if (numero==6) {
+       cout<<"Es sábado " "\n";
+       }
+    
+       if (numero==7) {
+       cout<<"Es domingo " "\n";
+       } 
+   }
+   
+    return 0;
+}
