@@ -19,19 +19,19 @@ int main()
     if (edad>0){
        
        if (edad>=0 && edad<13) {
-       cout<<"Te encuentras en la categoria niño " "\n";
+          cout<<"Te encuentras en la categoria niño " "\n";
        }
        
         if (edad>12 && edad<18) {
-       cout<<"Te encuentras en la categoria adolescente " "\n";
+          cout<<"Te encuentras en la categoria adolescente " "\n";
        }
    
        if (edad>17 && edad<65) {
-       cout<<"Te encuentras en la categoria adulto " "\n";
+          cout<<"Te encuentras en la categoria adulto " "\n";
        }
        
        if (edad>64 && edad<120) {
-       cout<<"Te encuentras en la categoria anciano " "\n";
+          cout<<"Te encuentras en la categoria anciano " "\n";
        }
         
    }
