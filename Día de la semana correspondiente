@@ -18,32 +18,32 @@ int main()
    
    if (numero>0 && numero<8 ){
        
-       if (numero==1) {
-       cout<<"Es lunes " "\n";
+       if (numero==1){
+           cout<<"Es lunes " "\n";
        }
-       
+      
        if (numero==2) {
-       cout<<"Es martes " "\n";
+          cout<<"Es martes " "\n";
        }
       
        if (numero==3) {
-       cout<<"Es miércoles " "\n";
+          cout<<"Es miércoles " "\n";
        }
        
        if (numero==4) {
-       cout<<"Es jueves " "\n";
+          cout<<"Es jueves " "\n";
        }
        
        if (numero==5) {
-       cout<<"Es viernes " "\n";
+          cout<<"Es viernes " "\n";
        } 
         
        if (numero==6) {
-       cout<<"Es sábado " "\n";
+          cout<<"Es sábado " "\n";
        }
     
        if (numero==7) {
-       cout<<"Es domingo " "\n";
+          cout<<"Es domingo " "\n";
        } 
    }
    
