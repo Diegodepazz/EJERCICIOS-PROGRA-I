@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std; 
+
+int main()
+{
+    int num; 
+    int a = 0; 
+    int b = 1; 
+    
+    cout<<"Introduce un número entero: "<<"\n";
+    cin>>num;
+    
+    cout<<"La serie de Fibonacci empezando por abajo es: "<<"\n";
+    
+    while(a < num){
+        
+        cout<<a<<" "; 
+        
+        int temp = a; 
+        a = b; 
+        b = temp + b; 
+    }
+
+    return 0;
+}
