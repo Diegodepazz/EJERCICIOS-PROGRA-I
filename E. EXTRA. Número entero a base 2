@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeroDecimal;
+    
+    // Pedir al usuario que ingrese un número en base 10
+    cout << "Ingresa un número en base 10: ";
+    cin >> numeroDecimal;
+    
+    // Convertir a binario
+    int binario[100]; // Para almacenar los dígitos del binario
+    int indice = 0;
+    
+    // Mientras el número sea mayor que 0
+    while (numeroDecimal > 0) {
+        binario[indice] = numeroDecimal % 2; // Guardar el resto (0 o 1)
+        numeroDecimal = numeroDecimal / 2;   // Dividir entre 2
+        indice++;
+    }
+    
+    // Mostrar el número binario (debe imprimirse al revés)
+    cout << "El número en base 2 es: ";
+    for (int i = indice - 1; i >= 0; i--) {
+        cout << binario[i];
+    }
+    
+    return 0;
+}
