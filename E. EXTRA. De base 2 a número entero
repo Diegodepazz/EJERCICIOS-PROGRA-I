@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int numeroBinario; 
+    int digito = 0; 
+    int base10 = 0;  
+    int multiplicador = 1;
+
+    // Pedir al usuario que ingrese un número en base 2
+    cout << "Ingresa un número en base 2: ";
+    cin >> numeroBinario;
+
+    // Convertir de binario a decimal
+    while (numeroBinario > 0) {
+        digito = numeroBinario % 10;       // Obtener el último dígito (0 o 1)
+        base10 += digito * multiplicador;  // Multiplicar el dígito por el valor actual del multiplicador
+        multiplicador *= 2;                // El multiplicador se incrementa (2^0, 2^1, 2^2, ...)
+        numeroBinario /= 10;               // Eliminar el último dígito del número binario
+    }
+
+    // Mostrar el resultado
+    cout << "El número en base 10 es: " << base10 <<"\n";
+
+    return 0;
+}
