@@ -1,0 +1,21 @@
+#include <iostream>
+  using namespace std;
+  
+  int main()
+  {
+      
+      int num, suma = 0;    
+      
+      cout << "Introduce un número para calcular los números pares entre el 0 y el introducido: ";
+      cin >> num;
+
+      for (int i = 0; i <= num; i++) {
+        if (i % 2 == 0) {  
+            suma += i;
+        }
+    }
+
+      cout << "La suma de los números pares entre 0 y el " << num << " es: " << suma << "\n";
+      
+      return 0;
+  }
