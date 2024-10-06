@@ -28,7 +28,7 @@ int main()
     
     while (salir != 0){
         
-        int numero_aleatorio = rand() % 110 + 101;
+        int numero_aleatorio = rand() % 101 + 110;
         cout << "El número aleatorio es: " << numero_aleatorio <<"\n";
         
         cout << "Introduce un número entre 110 y 210: ";
