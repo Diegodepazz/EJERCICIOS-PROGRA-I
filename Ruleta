@@ -1,0 +1,66 @@
+#include <iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+struct Jugador{
+    
+    string nombre;
+    int contador_aciertos = 0;
+    int contador_fallos = 0;
+    
+};
+
+int main()
+{
+    Jugador mijugador;
+    srand(time(0));
+ 
+    int numero;
+    mijugador.contador_aciertos;
+    mijugador.contador_fallos;
+    int salir = 1;
+    
+    cout << "Vamos a jugar a la ruleta \n"; 
+    cout << "Introduce tu nombre: ";
+    cin >> mijugador.nombre;
+    cout << "Hola " << mijugador.nombre << ", vamos a comenzar a jugar: \n";
+    
+    while (salir != 0){
+        
+        int numero_aleatorio = rand() % 110 + 101;
+        cout << "El número aleatorio es: " << numero_aleatorio <<"\n";
+        
+        cout << "Introduce un número entre 110 y 210: ";
+        cin>>numero;
+        
+        while (numero<110 || numero>210) {
+            cout<<"El numero introducido está fuera del rango, introduce un número correcto: ";
+            cin>>numero;
+        }
+        
+        while (numero != numero_aleatorio) {
+            cout << "Vuelve a intentarlo. ";
+            mijugador.contador_fallos ++;
+            cout << "Llevas " << mijugador.contador_fallos << " fallos \n";
+            cout << "Introduce un número entre 110 y 210: ";
+            cin >> numero;
+    
+            while (numero < 110 || numero > 210) {
+                cout << "El número introducido está fuera del rango, introduce un número correcto: ";
+             cin >> numero;
+            }
+        }
+        
+        cout << "Número correcto. ¡¡FELICIDADES!!";
+        mijugador.contador_aciertos ++;
+        cout << "Llevas " << mijugador.contador_aciertos << " aciertos \n";
+        cout << "¿Desea seguir con la ruleta? Introduce un 0 para salir o un 1 para seguir: ";
+        cin >> salir;
+        
+    }
+    
+    cout << "Has finalizado con " << mijugador.contador_fallos << " fallos y con "<< mijugador.contador_aciertos << " aciertos";
+    
+    return 0;
+}
