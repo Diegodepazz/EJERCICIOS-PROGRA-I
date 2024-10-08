@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int numero_usuario;
+    int SiPrimo = 1;
+    
+    cout << "Introduce un número para saber si es primo: ";
+    cin >> numero_usuario;
+
+    if (numero_usuario <= 1) {
+        SiPrimo = 0;  
+    } else {
+        for (int i = 2; i < numero_usuario; i++) {
+            if (numero_usuario % i == 0) {
+                SiPrimo = 0; 
+                break;        
+            }
+        }
+    }
+
+    if (SiPrimo == 1) {
+        cout << numero_usuario << " es un número primo." << endl;
+    } else {
+        cout << numero_usuario << " no es un número primo." << endl;
+    }
+
+    return 0;
+}
