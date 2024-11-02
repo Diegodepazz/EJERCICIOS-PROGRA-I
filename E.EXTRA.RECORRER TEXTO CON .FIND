@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string texto = "tres tristes tigres comen trigo en un trigal, el trigal esta tras el tr";
+    string silaba = "tri";
+    bool encontrada = false;
+    int contador = 0;
+
+    size_t pos = texto.find(silaba);
+
+    while (pos != string::npos) {
+        encontrada = true;
+        contador++;
+        cout << "Sílaba encontrada en la posición: " << pos << "\n";
+        pos = texto.find(silaba, pos + 1); 
+    }
+
+    if (!encontrada) {
+        cout << "Sílaba no encontrada en el texto \n";
+    } else {
+        cout << "Total de veces que aparece la sílaba: " << contador << "\n";
+    }
+
+    return 0;
+}
